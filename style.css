@@ -4,6 +4,8 @@ body {
 	font-family: "EB Garamond", serif;
 	font-size: 24px;
 	padding: 24px;
+	background-color: black;
+	color: white;
 }
 
 
@@ -18,4 +20,14 @@ h2 {
 
 p { 
 	max-width: 65ch;
+	line-height: 200%;
+}
+
+.introduction-paragraph {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.author {
+	font-family: 'Helvetica';
 }
