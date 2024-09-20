@@ -1,0 +1,122 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@300;400;800&display=swap');
+
+/* Local font files */
+@font-face {
+   src: url('fonts/IBMPlexSerif-Regular.ttf');
+   font-family: 'Plex Serif';
+   font-weight: 400;
+}
+
+@font-face {
+   src: url('fonts/IBMPlexSerif-SemiBold.ttf');
+   font-family: 'Plex Serif';
+   font-weight: 600;
+}
+
+@font-face {
+   src: url('fonts/IBMPlexSerif-Italic.ttf');
+   font-family: 'Plex Serif';
+   font-style: italic;
+   font-weight: 400;
+}
+
+html {
+   font-size: 112.5%;
+}
+
+body {
+   font-family: 'Plex Serif', serif;
+   background-color: #fafaf4;
+   color: #333333;
+}
+
+::selection {
+   background-color: hsl(39, 100%, 50%);
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Grenze Gotisch', serif;
+	font-weight: 400;
+	line-height: 1.3;
+}
+
+h1 {
+	font-size: 5.653rem;
+   font-weight: 800;
+}
+
+h2 {
+	font-size: 3.998rem;
+}
+
+h3 {
+	font-size: 2.827rem;
+   font-weight: 300;
+}
+
+h4 {
+	font-size: 1.999rem;
+}
+
+h5 {
+	font-size: 1.414rem;
+}
+
+p {
+   font-size: 1rem;
+   line-height: 1.5;
+}
+
+blockquote {
+   font-style: italic;
+}
+
+ul {
+   list-style-type: '♣︎';
+   list-style-position: inside;
+}
+
+small {
+   font-size: 0.707rem;
+}
+
+em {
+   font-style: italic;
+}
+
+strong {
+   font-weight: 600;
+}
+
+a {
+   color: hsl(39, 100%, 50%);
+   text-decoration: underline;
+}
+
+a:hover {
+   text-decoration: none;
+}
+
+a:active {
+   color: hsl(216, 100%, 50%);
+}
+
+a:not([href^="#"]):visited {
+   color: hsl(25, 100%, 50%);
+}
+
+a[href^="#"]::before {
+   content: '# ';
+}
+
+a:not([href^="#"])::before {
+   content: '♠︎ ';
+}
+
+h1,
+article header h2,
+footer {
+   color: #fafaf4;
+   background-color: #333;
+}
