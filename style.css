@@ -1,33 +1,117 @@
+/* This is from Google Fonts `<> Get embed code` → `@import` option. */
+/* We don’t need the `<style>` tag they give you, since we are already in CSS! */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
+
+
 body {
+	/* Color/font properties will inherit to everything. */
 	font-family: "EB Garamond", serif;
 	font-size: 24px;
-	padding: 24px;
-	background-color: black;
-	color: white;
 }
+
+/* Only the header directly under `body`. */
+body > header,
+main,
+footer {
+	/* Inset all of these, relative to the `font-size`. */
+	padding: 2em;
+	/* This is like writing `48px`, but will adjust to the `body` size above! */
+}
+
+
+
+/* The reset clears this default, so we add it back. */
+em { font-style: italic; }
+
+/* Likewise, restore some link defaults. */
+a {
+	color: tomato;
+	text-decoration: underline;
+}
+
+/* Treat the anchor links (starting with `#`) differently. */
+a[href^="#"] {
+	color: red;
+	font-style: italic;
+	text-decoration: none;
+}
+
 
 
 h1 {
-	font-size: 100px;
+	font-size: 6em; /* This is “6x” relative to the base size. */
+	line-height: 80%; /* Bigger type needs tighter vertical spacing. */
 }
 
 h2 {
-	color: tomato;
-	font-size: 75px;
+	color: red;
+	font-style: italic;
+	font-size: 4em; /* Descending hierarchy. */
+	line-height: 100%;
 }
 
-p { 
-	max-width: 65ch;
-	line-height: 200%;
+h3 {
+	font-size: 2em; /* Down once more. */
 }
 
-.introduction-paragraph {
-	font-size: 36px;
+p {
+	line-height: 180%; /* Body copy needs looser vertical spacing. */
+	max-width: 75ch; /* Limit the line-lengths (approximate characters). */
+}
+
+pre {
+	font-family: 'Courier', monospace; /* Typewriter vibes. */
+	opacity: 40%; /* Fade these back. */
+}
+
+blockquote,
+cite {
+	/* We’ll have these inset and a bit bigger. */
+	font-size: 1.25em;
+	font-style: italic;
+	margin-left: 3em;
+}
+
+
+
+/* Give these “bookend” containers a background. */
+body > header,
+footer {
+	background-color: #eee;
+}
+
+header,
+article {
+	/* Some space after these. */
+	margin-bottom: 4em;
+}
+
+section > * {
+	/* And space above every child of the `section`s. */
+	margin-top: 2em;
+}
+
+section li {
+	/* The reset also cleared list bullets, so add them back. */
+	list-style-type: square;
+	margin-left: 2em;
+}
+
+
+
+/* Use classes for things you want to treat alike. */
+.author-info {
+	/* Fallbacks for when the font is not installed/imported! */
+	font-family: 'Helvetica Neue', 'Arial', sans-serif;
 	font-weight: bold;
+	margin-bottom: 1em; /* Add some space around these. */
+	margin-top: 1em;
 }
 
-.author {
-	font-family: 'Helvetica';
+.introduction {
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 100%;
+	max-width: 60ch; /* Short lines when it is bigger. */
 }
