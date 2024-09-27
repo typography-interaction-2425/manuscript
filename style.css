@@ -10,17 +10,6 @@ body {
 	font-size: 24px;
 }
 
-/* Only the header directly under `body`. */
-body > header,
-main,
-footer {
-	/* Inset all of these, relative to the `font-size`. */
-	padding: 2em;
-	/* This is like writing `48px`, but will adjust to the `body` size above! */
-}
-
-
-
 /* The reset clears this default, so we add it back. */
 em { font-style: italic; }
 
@@ -70,7 +59,6 @@ cite {
 	/* We’ll have these inset and a bit bigger. */
 	font-size: 1.25em;
 	font-style: italic;
-	margin-left: 3em;
 }
 
 
@@ -81,21 +69,9 @@ footer {
 	background-color: #eee;
 }
 
-header,
-article {
-	/* Some space after these. */
-	margin-bottom: 4em;
-}
-
-section > * {
-	/* And space above every child of the `section`s. */
-	margin-top: 2em;
-}
-
 section li {
 	/* The reset also cleared list bullets, so add them back. */
 	list-style-type: square;
-	margin-left: 2em;
 }
 
 
@@ -105,13 +81,10 @@ section li {
 	/* Fallbacks for when the font is not installed/imported! */
 	font-family: 'Helvetica Neue', 'Arial', sans-serif;
 	font-weight: bold;
-	margin-bottom: 1em; /* Add some space around these. */
-	margin-top: 1em;
 }
 
 .introduction {
 	font-size: 1.5em;
 	font-weight: bold;
 	line-height: 100%;
-	max-width: 60ch; /* Short lines when it is bigger. */
 }
